@@ -41,6 +41,14 @@ export class AppComponent {
     })
   }
 
+  async getConfig() {
+    this.cloud.getConfig().then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log("ERR: " + err);
+    })
+  }
+
   // AUTH
   addRole() {
     this.user.addRole().then((res) => {

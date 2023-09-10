@@ -25,4 +25,13 @@ export class CloudService {
       throw err.message;
     }
   }
+
+  async getConfig() {
+    try {
+      return await Parse.Cloud.run("getConfig");
+    }
+    catch (err: any) {
+      throw err.message;
+    }
+  }
 }
